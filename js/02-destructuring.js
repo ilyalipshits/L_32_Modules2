@@ -74,6 +74,28 @@ console.log(a,b);//10,20
 [a,b]=[b, a]
 console.log(a, b)//20,10
 
+console.log("====Деструктуризация параметров функции====")
+
+function printUser({name,age,zip}){
+    console.log(name,age,zip)
+};
+// function printUser(user){
+//     const {name,age}=user;
+//     console.log(name,age);
+// };  // так не принято
+
+const user3={
+    name:"Alice",
+    age:30,
+    city: "NY"
+
+}
+
+printUser(user3) //Alice 30 undefined
+
+
+
+
 
 
 
