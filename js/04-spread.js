@@ -117,6 +117,50 @@ console.log(user5.address===copy5.address); //true
 
 // копируем вложенный объект отдельно
 
+const user6 = {
+    name: "John",
+
+    address: {
+        city: "New York",
+        zip: 10001
+    }
+};
+
+const copy6={
+    ...user6,
+    address:{
+        ...user6.address
+    }};
+
+copy6.address.zip=555555555;
+
+console.log(copy6);
+console.log(user6)
+
+const user7 = {
+    name: "John",
+
+    address: {
+        city: "New York",
+        zip: 10001,
+        coordinates:{
+            lat:0,
+            lng:0
+        }
+    }
+};
+
+const copy7=structuredClone(user7);
+
+copy7.address.coordinates.lat=100;
+copy7.address.coordinates.lng=200;
+
+console.log(copy7);
+console.log(user7);
+
+console.log("=======Closure========");
+
+
 
 
 
